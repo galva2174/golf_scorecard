@@ -19,7 +19,7 @@ struct Player
     char name[50];
     float handicap;
     int total_rounds_played;
-    int total_score;
+    int total_score;  
     
 };
 struct Score 
@@ -28,7 +28,8 @@ struct Score
     struct Score *next;
 };
 struct Round 
-{
+{ 
+         
     struct Score *scores;
     struct Round *next;
 };
@@ -191,7 +192,6 @@ void display_player_statistics(struct Player player)
 {
     printf("Player Statistics:\n");
     printf("Name: %s\n", player.name);
-    printf("Handicap: %.2f\n", player.handicap);
     printf("Total Rounds Played: %d\n", player.total_rounds_played);
     printf("Total Score: %d\n", player.total_score);
 }
